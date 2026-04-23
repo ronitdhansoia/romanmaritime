@@ -227,10 +227,10 @@ export default function Home() {
               For matters of trade, charter, or counsel, please write.
             </p>
             <a
-              href="mailto:enquiries@romanmaritime.com"
+              href="mailto:contact@romanmaritime.com"
               className="mt-10 inline-block font-display text-[11px] tracking-[0.35em] uppercase border-b border-foreground/40 pb-1 transition-colors hover:border-foreground"
             >
-              enquiries@romanmaritime.com
+              contact@romanmaritime.com
             </a>
             <address className="mt-10 not-italic font-serif text-[0.9375rem] leading-relaxed text-foreground/55">
               <span className="block italic">The Offices of Roman Maritime</span>
