@@ -1,4 +1,5 @@
 import Image from "next/image";
+import WorldMap from "./components/WorldMap";
 
 const disciplines = [
   {
@@ -43,90 +44,6 @@ function Emblem({ className }: { className?: string }) {
         opacity="0.5"
       />
       <circle cx="20" cy="20" r="1.2" fill="currentColor" />
-    </svg>
-  );
-}
-
-function RouteMap({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 800 320"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      role="img"
-      aria-label="Trade route map showing Dubai, Gujarat, and Mumbai"
-    >
-      <g stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.08">
-        <line x1="0" y1="80" x2="800" y2="80" />
-        <line x1="0" y1="160" x2="800" y2="160" />
-        <line x1="0" y1="240" x2="800" y2="240" />
-      </g>
-
-      <g
-        stroke="currentColor"
-        strokeWidth="1"
-        fill="none"
-        strokeOpacity="0.42"
-        strokeLinecap="round"
-      >
-        <path d="M 140 95 Q 360 25 560 160" />
-        <path d="M 560 160 Q 580 210 600 270" />
-      </g>
-
-      <g>
-        <circle cx="140" cy="95" r="4" fill="currentColor" />
-        <circle
-          cx="140"
-          cy="95"
-          r="11"
-          fill="none"
-          stroke="currentColor"
-          strokeOpacity="0.22"
-        />
-        <circle cx="560" cy="160" r="4" fill="currentColor" />
-        <circle
-          cx="560"
-          cy="160"
-          r="11"
-          fill="none"
-          stroke="currentColor"
-          strokeOpacity="0.22"
-        />
-        <circle cx="600" cy="270" r="4" fill="currentColor" />
-        <circle
-          cx="600"
-          cy="270"
-          r="11"
-          fill="none"
-          stroke="currentColor"
-          strokeOpacity="0.22"
-        />
-      </g>
-
-      <g
-        fill="currentColor"
-        fontFamily="var(--font-inter), sans-serif"
-        fontSize="11"
-        textAnchor="middle"
-        style={{ letterSpacing: "3px" }}
-      >
-        <text x="140" y="70">DUBAI</text>
-        <text x="560" y="135">GUJARAT</text>
-        <text x="600" y="300">MUMBAI</text>
-      </g>
-
-      <g
-        fill="currentColor"
-        fillOpacity="0.55"
-        fontFamily="var(--font-cormorant), serif"
-        fontSize="14"
-        fontStyle="italic"
-        textAnchor="middle"
-      >
-        <text x="140" y="125">25°N · 55°E</text>
-        <text x="560" y="190">22°N · 71°E</text>
-        <text x="600" y="247">18°N · 72°E</text>
-      </g>
     </svg>
   );
 }
@@ -262,7 +179,7 @@ export default function Home() {
                 className="mx-auto mt-10 h-px w-12 bg-foreground/25"
               />
             </div>
-            <RouteMap className="mt-16 w-full text-foreground" />
+            <WorldMap className="mt-16 w-full text-foreground" />
           </div>
         </section>
 
@@ -317,7 +234,8 @@ export default function Home() {
             </a>
             <address className="mt-10 not-italic font-serif text-[0.9375rem] leading-relaxed text-foreground/55">
               <span className="block italic">The Offices of Roman Maritime</span>
-              Dubai &middot; United Arab Emirates
+              <span className="block">Dubai &middot; United Arab Emirates</span>
+              <span className="block">Gujarat &middot; India</span>
             </address>
             <p className="mt-8 font-serif italic text-[0.875rem] text-foreground/45">
               By appointment
